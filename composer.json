@@ -1,0 +1,36 @@
+{
+    "name": "i-saad-salman/statamic-analytics",
+    "description": "Basic Analytics widgets for your statamic dashboard without Google Analytics",
+    "keywords": [
+        "statamic",
+        "analytics",
+        "dashboard"
+    ],
+    "require": {
+        "jenssegers/agent": "^2.6"
+    },
+    "authors": [
+        {
+            "name": "Saad Salman"
+        }
+    ],
+    "support": {
+        "email": "saad.salman@me.com"
+    },
+    "autoload": {
+        "psr-4": {
+            "ISaadSalman\\StatamicAnalytics\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Statamic Analytics",
+            "description": "Statamic Analytics addon"
+        },
+        "laravel": {
+            "providers": [
+                "ISaadSalman\\StatamicAnalytics\\ServiceProvider"
+            ]
+        }
+    }
+}
