@@ -29,7 +29,7 @@ class Analytics
         $referer = null;
 
 
-        if ( !str_starts_with($request->headers->get('referer'), $request->root())) {
+        if ( $request->headers->get('referer') &&  !str_starts_with($request->headers->get('referer'), $request->root())) {
             $referer  = $request->headers->get('referer');
         }
  
