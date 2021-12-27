@@ -16,8 +16,9 @@ class Analytics
 
         $response = $next($request);
 
-        // remove the analytics routes
-        if ($request->is( config('statamic-analytics.exclude') ) ) {
+        // remove the analytics routes and user agent is empty ignore
+
+        if ($request->headers->get('user-agent') == '' || $request->is( config('statamic-analytics.exclude') )) {
             return $response;
         } 
         
@@ -29,7 +30,7 @@ class Analytics
         $referer = null;
 
 
-        if ( $request->headers->get('referer') &&  !str_starts_with($request->headers->get('referer'), $request->root())) {
+        if ( $request->headers->get('referer') && !str_starts_with($request->headers->get('referer'), $request->root())) {
             $referer  = $request->headers->get('referer');
         }
  

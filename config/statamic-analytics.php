@@ -25,6 +25,8 @@ return [
         '/analytics',
         'img/*',
         'vendor/*',
+        'css/*',
+        'js/*',
     ],
 
 ];
