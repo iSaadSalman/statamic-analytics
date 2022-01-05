@@ -16,9 +16,11 @@ class Analytics
 
         $response = $next($request);
 
-        // remove the analytics routes and user agent is empty ignore
-
-        if ($request->headers->get('user-agent') == '' || $request->is( config('statamic-analytics.exclude') )) {
+        // remove the analytics routes and user agent is empty ignore or if page does not exist
+        if ($request->headers->get('user-agent') == '' || 
+            $request->is( config('statamic-analytics.exclude') ) ||
+            $response->status() != 200
+        ) {
             return $response;
         } 
         

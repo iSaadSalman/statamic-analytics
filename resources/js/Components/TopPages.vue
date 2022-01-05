@@ -11,8 +11,8 @@
             </thead>
             <tbody>
                 <tr class="outline-none" v-for="(page, index) in pages" :key="index">
-                    <td>{{ page.page }}</td>
-                    <td class="text-right">{{ page.visitors }}</td>
+                    <td class="text-sm break-all">{{ page.page }}</td>
+                    <td class="text-right break-all">{{ page.visitors }}</td>
                 </tr>
             </tbody>
 

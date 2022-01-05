@@ -11,7 +11,7 @@
             </thead>
             <tbody>
                 <tr class="outline-none" v-for="(item, index) in items" :key="index">
-                    <td class="text-sm">{{ item.browser }}</td>
+                    <td class="text-sm break-all">{{ item.browser }}</td>
                     <td class="text-right">{{ item.visitors }}</td>
                 </tr>
             </tbody>

@@ -12,7 +12,7 @@
 
             <tbody>
                 <tr class="outline-none" v-for="(referrer, index) in referrers" :key="index">
-                    <td class="text-sm">{{ referrer.source ? referrer.source : 'Other/Direct' }}</td>
+                    <td class="text-sm break-all">{{ referrer.source ? referrer.source : 'Other/Direct' }}</td>
                     <td class="text-right">{{ referrer.visitors }}</td>
                 </tr>
             </tbody>
